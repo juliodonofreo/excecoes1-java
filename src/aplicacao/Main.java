@@ -36,17 +36,15 @@ public class Main {
 
             Date agora = new Date();
 
-            if (checkin.before(agora) || checkout.before(agora)) {
-                System.out.println("Erro na reserva: as datas atualizadas devem ser datas futuras");
-            } else if (!checkout.after(checkin)) {
-                System.out.println("Erro na reserva! a data de saida deve ser posterior à de entrada");
+            String erro = reserva.atualizarDatas(checkin, checkout);
+
+            if (erro != null) {
+                System.out.println("Erro na reserva: " + erro);
             }
             else {
-                reserva.atualizarDatas(checkin, checkout);
-
                 System.out.println("Reserva: " + reserva);
+
             }
         }
-
     }
 }
