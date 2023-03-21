@@ -18,9 +18,9 @@ public class Main {
         try {
             System.out.print("Número do quarto: ");
             int numeroQuarto = sc.nextInt();
-            System.out.print("Data de entrada (dd/MM/yyyy) ");
+            System.out.print("Data de entrada (dd/MM/yyyy): ");
             Date checkin = sdf.parse(sc.next());
-            System.out.print("Data de saída (dd/MM/yyyy) ");
+            System.out.print("Data de saída (dd/MM/yyyy): ");
             Date checkout = sdf.parse(sc.next());
 
             Reserva reserva = new Reserva(numeroQuarto, checkin, checkout);
